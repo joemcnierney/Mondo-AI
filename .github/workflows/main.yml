@@ -19,6 +19,7 @@ jobs:
           host: 146.190.77.103
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASSPHRASE }}
           script: |
             cd /var/www/html
             rm -rf *
