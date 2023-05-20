@@ -12,13 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          node-version: '16'
 
       - name: Deploy to DigitalOcean
         uses: appleboy/ssh-action@master
         with:
-          host: your-droplet-ip
+          host: 146.190.77.103
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
